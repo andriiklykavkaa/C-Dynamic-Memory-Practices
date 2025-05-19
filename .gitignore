@@ -1,0 +1,47 @@
+# === C build artifacts ===
+*.o
+*.a
+*.so
+*.out
+*.lo
+*.la
+*.obj
+*.exe
+*.dll
+
+# === CLion & CMake ===
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+compile_commands.json
+.idea/
+*.iml
+
+# === macOS system files ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# === Logs and temp files ===
+*.log
+*.tmp
+*.swp
+*.swo
+
+# === Executables (if compiled into project dir) ===
+*/a.out
+a.out
+
+# === Backup files ===
+*~
+*.bak
+
+# === Generated testing files ===
+test_*
+
+# === Coverage / profiling ===
+*.gcno
+*.gcda
+*.gcov
