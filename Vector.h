@@ -16,7 +16,7 @@ void freeVector(Vector * vec);
 
 void pushBack(Vector * vec, int el);
 void pop(Vector * vec);
-void insert(Vector * vec, int index, int el);
+void insertToVector(Vector * vec, int index, int el);
 void delete(Vector * vec, int index);
 void vectorResize(Vector * vec, int newCapacity);
 

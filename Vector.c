@@ -51,7 +51,7 @@ void pop(Vector * vec) {
     (*vec).size--;
 }
 
-void insert(Vector * vec, int index, int el) {
+void insertToVector(Vector * vec, int index, int el) {
     if (index > (*vec).size) {
         pushBack(vec, el);
         return;

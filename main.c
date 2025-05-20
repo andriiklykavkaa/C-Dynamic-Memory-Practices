@@ -9,21 +9,30 @@
 
 int main(void)
 {
-    Buffer buffer;
-    initBuffer(&buffer);
+    Buffer buffer = createBuffer();
 
     printf("Empty buffer:\n");
-    printBuffer(&buffer);
+    buffer.print(&buffer);
 
-    appendText(&buffer, "Record #1!");
-    appendText(&buffer, " My second record");
+    buffer.append(&buffer, "Record #1!");
+    buffer.append(&buffer, "My second recordeee");
+
     printf("Half filled buffer:\n");
-    printBuffer(&buffer);
-    addLine(&buffer);
-    addLine(&buffer);
-    addLine(&buffer);
-    appendText(&buffer, "The last record today");
+    buffer.print(&buffer);
+
+    buffer.addLine(&buffer);
+    buffer.addLine(&buffer);
+    buffer.addLine(&buffer);
+
+    buffer.append(&buffer, "The last record today");
     printf("Last buffer:\n");
-    printBuffer(&buffer);
+    buffer.print(&buffer);
+
+    printf("========\n");
+    buffer.insert(&buffer, 0, 10, "Anton is busy today");
+    buffer.print(&buffer);
+
+    size_t result = buffer.search(&buffer, "today");
+    printf("Matches: %lu", result);
 }
 
